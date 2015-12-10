@@ -93,4 +93,5 @@ xcuserdata
 DerivedData
 *.xcuserstate
 
-
+Carthage/Checkouts
+Carthage/Build
