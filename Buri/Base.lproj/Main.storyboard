@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="9531"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -676,6 +677,36 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
+        </scene>
+        <!--Twitter Authentication-->
+        <scene sceneID="giJ-Bh-0nO">
+            <objects>
+                <viewController title="Twitter Authentication" storyboardIdentifier="TwitterAuth" id="EWp-4n-gse" customClass="TwitterAuthViewController" customModule="Buri" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="a53-ak-OgZ">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <webView translatesAutoresizingMaskIntoConstraints="NO" id="2gP-Cn-ySV">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
+                                <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0">
+                                    <nil key="identifier"/>
+                                </webPreferences>
+                            </webView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="2gP-Cn-ySV" firstAttribute="leading" secondItem="a53-ak-OgZ" secondAttribute="leading" id="COc-1Z-dRs"/>
+                            <constraint firstItem="2gP-Cn-ySV" firstAttribute="top" secondItem="a53-ak-OgZ" secondAttribute="top" id="bwX-af-LIF"/>
+                            <constraint firstAttribute="bottom" secondItem="2gP-Cn-ySV" secondAttribute="bottom" id="dKm-dG-V9G"/>
+                            <constraint firstAttribute="trailing" secondItem="2gP-Cn-ySV" secondAttribute="trailing" id="gFV-Gr-b1s"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="2gP-Cn-ySV" id="swH-YC-Hfy"/>
+                    </connections>
+                </viewController>
+                <customObject id="ahG-cH-GiD" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="1092"/>
         </scene>
     </scenes>
 </document>

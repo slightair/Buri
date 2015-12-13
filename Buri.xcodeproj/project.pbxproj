@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		578BCD921C1D383E003843D3 /* TwitterAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578BCD911C1D383E003843D3 /* TwitterAuthViewController.swift */; };
 		57AF6E9E1C19C12100406A25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AF6E9D1C19C12100406A25 /* AppDelegate.swift */; };
 		57AF6EA01C19C12100406A25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AF6E9F1C19C12100406A25 /* ViewController.swift */; };
 		57AF6EA21C19C12100406A25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57AF6EA11C19C12100406A25 /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		578BCD911C1D383E003843D3 /* TwitterAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAuthViewController.swift; sourceTree = "<group>"; };
 		57AF6E9A1C19C12100406A25 /* Buri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Buri.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57AF6E9D1C19C12100406A25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57AF6E9F1C19C12100406A25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				57AF6E9D1C19C12100406A25 /* AppDelegate.swift */,
 				57AF6E9F1C19C12100406A25 /* ViewController.swift */,
+				578BCD911C1D383E003843D3 /* TwitterAuthViewController.swift */,
 				57AF6EA11C19C12100406A25 /* Assets.xcassets */,
 				57AF6EA31C19C12100406A25 /* Main.storyboard */,
 				57AF6EA61C19C12100406A25 /* Info.plist */,
@@ -216,6 +219,7 @@
 			files = (
 				57AF6EC51C1D1AEF00406A25 /* TwitterTokens.swift in Sources */,
 				57AF6EA01C19C12100406A25 /* ViewController.swift in Sources */,
+				578BCD921C1D383E003843D3 /* TwitterAuthViewController.swift in Sources */,
 				57AF6E9E1C19C12100406A25 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
