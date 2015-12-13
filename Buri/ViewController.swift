@@ -1,30 +1,30 @@
 import Cocoa
-import OAuthSwift
+import Accounts
+import Social
 
 class ViewController: NSViewController {
-    var twitterAuthViewController: TwitterAuthViewController!
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.twitterAuthViewController = NSStoryboard(name: "Main", bundle: nil).instantiateControllerWithIdentifier("TwitterAuth") as? TwitterAuthViewController
-        self.addChildViewController(self.twitterAuthViewController);
+        let accountStore = ACAccountStore()
+        let accountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
+        accountStore.requestAccessToAccountsWithType(accountType, options: nil, completion: { granted, error in
+            if granted {
+                if let accounts = accountStore.accountsWithAccountType(accountType) {
+                    print(accounts)
 
-        let oauthswift = OAuth1Swift(
-            consumerKey: TwitterTokens.ConsumerKey,
-            consumerSecret: TwitterTokens.ConsumerSecret,
-            requestTokenUrl: "https://api.twitter.com/oauth/request_token",
-            authorizeUrl: "https://api.twitter.com/oauth/authorize",
-            accessTokenUrl: "https://api.twitter.com/oauth/access_token"
-        )
-        oauthswift.authorize_url_handler = self.twitterAuthViewController
-        oauthswift.authorizeWithCallbackURL( NSURL(string: "buri://oauth-callback/twitter")!, success: { credential, response, parameters in
-                self.dismissViewController(self.twitterAuthViewController)
-                print(credential)
-            }, failure: { error in
-                fatalError(error.localizedDescription)
+                    let account = accounts.first as! ACAccount
+                    let timelineURL = NSURL(string: "https://api.twitter.com/1.1/statuses/home_timeline.json")!
+                    let params: [NSString: AnyObject] = [:]
+                    let request = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: .GET, URL: timelineURL, parameters: params)
+                    request.account = account
+                    request.performRequestWithHandler { responseData, response, error in
+                        let timeline = try! NSJSONSerialization.JSONObjectWithData(responseData, options: NSJSONReadingOptions(rawValue: 0))
+                        print(timeline)
+                    }
+                }
             }
-        )
+        })
     }
 
     override var representedObject: AnyObject? {
