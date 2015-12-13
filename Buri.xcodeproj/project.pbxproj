@@ -23,6 +23,7 @@
 		57AF6EC01C19D3AA00406A25 /* Himotoki.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 57AF6EBC1C19D3AA00406A25 /* Himotoki.framework.dSYM */; };
 		57AF6EC11C19D3AA00406A25 /* OAuthSwift.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 57AF6EBD1C19D3AA00406A25 /* OAuthSwift.framework.dSYM */; };
 		57AF6EC21C19D3AA00406A25 /* Result.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 57AF6EBE1C19D3AA00406A25 /* Result.framework.dSYM */; };
+		57AF6EC51C1D1AEF00406A25 /* TwitterTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AF6EC41C1D1AEF00406A25 /* TwitterTokens.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -70,6 +71,7 @@
 		57AF6EBC1C19D3AA00406A25 /* Himotoki.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Himotoki.framework.dSYM; path = ../Carthage/Build/Mac/Himotoki.framework.dSYM; sourceTree = "<group>"; };
 		57AF6EBD1C19D3AA00406A25 /* OAuthSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = OAuthSwift.framework.dSYM; path = ../Carthage/Build/Mac/OAuthSwift.framework.dSYM; sourceTree = "<group>"; };
 		57AF6EBE1C19D3AA00406A25 /* Result.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Result.framework.dSYM; path = ../Carthage/Build/Mac/Result.framework.dSYM; sourceTree = "<group>"; };
+		57AF6EC41C1D1AEF00406A25 /* TwitterTokens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterTokens.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				57AF6EA31C19C12100406A25 /* Main.storyboard */,
 				57AF6EA61C19C12100406A25 /* Info.plist */,
 				57AF6EB91C19D33900406A25 /* Frameworks */,
+				57AF6EC41C1D1AEF00406A25 /* TwitterTokens.swift */,
 			);
 			path = Buri;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57AF6EC51C1D1AEF00406A25 /* TwitterTokens.swift in Sources */,
 				57AF6EA01C19C12100406A25 /* ViewController.swift in Sources */,
 				57AF6E9E1C19C12100406A25 /* AppDelegate.swift in Sources */,
 			);
