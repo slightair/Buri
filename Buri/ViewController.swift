@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  Buri
-//
-//  Created by slightair on 2015/12/10.
-//  Copyright © 2015年 slightair. All rights reserved.
-//
-
 import Cocoa
 
 class ViewController: NSViewController {
@@ -13,7 +5,6 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     override var representedObject: AnyObject? {
@@ -21,7 +12,4 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
-
 }
-
