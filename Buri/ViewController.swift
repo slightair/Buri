@@ -3,33 +3,36 @@ import Accounts
 import Social
 
 class ViewController: NSViewController {
+    let accountStore = TwitterAccountStore()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let accountStore = ACAccountStore()
-        let accountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
-        accountStore.requestAccessToAccountsWithType(accountType, options: nil, completion: { granted, error in
-            if granted {
-                if let accounts = accountStore.accountsWithAccountType(accountType) {
-                    print(accounts)
+        accountStore.loadAcccounts { result in
+            switch result {
+            case .Success(let accounts):
+                let account = accounts.first! as ACAccount
 
-                    let account = accounts.first as! ACAccount
-                    let timelineURL = NSURL(string: "https://api.twitter.com/1.1/statuses/home_timeline.json")!
-                    let params: [NSString: AnyObject] = [:]
-                    let request = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: .GET, URL: timelineURL, parameters: params)
-                    request.account = account
-                    request.performRequestWithHandler { responseData, response, error in
-                        let timeline = try! NSJSONSerialization.JSONObjectWithData(responseData, options: NSJSONReadingOptions(rawValue: 0))
-                        print(timeline)
+                let request = GetHomeTimelineRequest()
+                Twitter.sendRequest(account, request: request) { result in
+                    switch result {
+                    case .Success(let tweets):
+                        for tweet in tweets {
+                            print(tweet.text)
+                        }
+                    case .Failure(let error):
+                        print(error)
                     }
                 }
+            case .Failure(let error):
+                print(error.localizedDescription)
             }
-        })
+        }
     }
 
     override var representedObject: AnyObject? {
         didSet {
-        // Update the view, if already loaded.
+            // Update the view, if already loaded.
         }
     }
 }
