@@ -1,29 +1,18 @@
 import Cocoa
-import Accounts
-import Social
 
 class ViewController: NSViewController {
-    let accountStore = TwitterAccountStore()
+    var twitterAuthViewController = TwitterAuthViewController.defaultViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        accountStore.loadAcccounts { result in
-            switch result {
-            case .Success(let accounts):
-                let account = accounts.first! as ACAccount
+        self.addChildViewController(self.twitterAuthViewController);
 
-                let request = GetHomeTimelineRequest()
-                Twitter.sendRequest(account, request: request) { result in
-                    switch result {
-                    case .Success(let tweets):
-                        for tweet in tweets {
-                            print(tweet.text)
-                        }
-                    case .Failure(let error):
-                        print(error)
-                    }
-                }
+        self.twitterAuthViewController.authenticate { result in
+            switch result {
+            case .Success(let credential, let parameters):
+                print(credential)
+                print(parameters)
             case .Failure(let error):
                 print(error.localizedDescription)
             }
