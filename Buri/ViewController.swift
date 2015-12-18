@@ -13,6 +13,17 @@ class ViewController: NSViewController {
             case .Success(let credential, let parameters):
                 print(credential)
                 print(parameters)
+
+                let request = GetHomeTimelineRequest(credential: credential)
+                Twitter.sendRequest(request) { result in
+                    switch result {
+                    case .Success(let result):
+                        print(result)
+                    case .Failure(let error):
+                        print(error)
+                    }
+                }
+
             case .Failure(let error):
                 print(error.localizedDescription)
             }

@@ -1,16 +1,23 @@
 import Foundation
-import Social
+import APIKit
+import OAuthSwift
 import Himotoki
 
-struct GetUserTimelineRequest: TwitterAPIRequestType {
+struct GetUserTimelineRequest: TwitterRequest {
     typealias Response = [Tweet]
 
-    var method: SLRequestMethod {
+    var method: HTTPMethod {
         return .GET
     }
 
     var path: String {
         return "/1.1/statuses/user_timeline.json"
+    }
+
+    var TwitterCredential: OAuthSwiftCredential!
+
+    init(credential: OAuthSwiftCredential) {
+        TwitterCredential = credential
     }
 
     func responseFromObject(object: AnyObject, URLResponse: NSHTTPURLResponse) -> Response? {

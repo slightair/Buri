@@ -9,10 +9,9 @@
 /* Begin PBXBuildFile section */
 		5794F3881C1D75A100C7AC4C /* Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5794F3871C1D75A100C7AC4C /* Twitter.swift */; };
 		5794F38A1C1D761D00C7AC4C /* TwitterAccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5794F3891C1D761D00C7AC4C /* TwitterAccountStore.swift */; };
-		5794F38C1C1D905600C7AC4C /* TwitterAPIRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5794F38B1C1D905600C7AC4C /* TwitterAPIRequestType.swift */; };
+		5794F38C1C1D905600C7AC4C /* TwitterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5794F38B1C1D905600C7AC4C /* TwitterRequest.swift */; };
 		5794F38E1C1D908A00C7AC4C /* GetHomeTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5794F38D1C1D908A00C7AC4C /* GetHomeTimeline.swift */; };
 		5794F3941C1DB97100C7AC4C /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5794F3931C1DB97100C7AC4C /* Tweet.swift */; };
-		5794F3961C1E2A2B00C7AC4C /* TwitterAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5794F3951C1E2A2B00C7AC4C /* TwitterAPIError.swift */; };
 		57AF6E9E1C19C12100406A25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AF6E9D1C19C12100406A25 /* AppDelegate.swift */; };
 		57AF6EA01C19C12100406A25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AF6E9F1C19C12100406A25 /* ViewController.swift */; };
 		57AF6EA21C19C12100406A25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57AF6EA11C19C12100406A25 /* Assets.xcassets */; };
@@ -68,10 +67,9 @@
 /* Begin PBXFileReference section */
 		5794F3871C1D75A100C7AC4C /* Twitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Twitter.swift; sourceTree = "<group>"; };
 		5794F3891C1D761D00C7AC4C /* TwitterAccountStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAccountStore.swift; sourceTree = "<group>"; };
-		5794F38B1C1D905600C7AC4C /* TwitterAPIRequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAPIRequestType.swift; sourceTree = "<group>"; };
+		5794F38B1C1D905600C7AC4C /* TwitterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterRequest.swift; sourceTree = "<group>"; };
 		5794F38D1C1D908A00C7AC4C /* GetHomeTimeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetHomeTimeline.swift; path = API/GetHomeTimeline.swift; sourceTree = "<group>"; };
 		5794F3931C1DB97100C7AC4C /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
-		5794F3951C1E2A2B00C7AC4C /* TwitterAPIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAPIError.swift; sourceTree = "<group>"; };
 		57AF6E9A1C19C12100406A25 /* Buri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Buri.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57AF6E9D1C19C12100406A25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57AF6E9F1C19C12100406A25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,8 +120,7 @@
 				57C58F031C1F068D00840B56 /* API */,
 				5794F3891C1D761D00C7AC4C /* TwitterAccountStore.swift */,
 				5794F3871C1D75A100C7AC4C /* Twitter.swift */,
-				5794F38B1C1D905600C7AC4C /* TwitterAPIRequestType.swift */,
-				5794F3951C1E2A2B00C7AC4C /* TwitterAPIError.swift */,
+				5794F38B1C1D905600C7AC4C /* TwitterRequest.swift */,
 				7FEB68A31C211035005DF5F2 /* TwitterTokens.swift */,
 			);
 			path = Client;
@@ -277,14 +274,13 @@
 				57AF6EA01C19C12100406A25 /* ViewController.swift in Sources */,
 				5794F38A1C1D761D00C7AC4C /* TwitterAccountStore.swift in Sources */,
 				7FEB68A21C210F02005DF5F2 /* TwitterAuthViewController.swift in Sources */,
-				5794F38C1C1D905600C7AC4C /* TwitterAPIRequestType.swift in Sources */,
+				5794F38C1C1D905600C7AC4C /* TwitterRequest.swift in Sources */,
 				5794F3941C1DB97100C7AC4C /* Tweet.swift in Sources */,
 				5794F3881C1D75A100C7AC4C /* Twitter.swift in Sources */,
 				5794F38E1C1D908A00C7AC4C /* GetHomeTimeline.swift in Sources */,
 				57AF6E9E1C19C12100406A25 /* AppDelegate.swift in Sources */,
 				57C58F051C1F06B400840B56 /* GetUserTimeline.swift in Sources */,
 				7FEB68A41C211035005DF5F2 /* TwitterTokens.swift in Sources */,
-				5794F3961C1E2A2B00C7AC4C /* TwitterAPIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
