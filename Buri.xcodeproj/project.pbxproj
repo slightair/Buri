@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5778A54E1C253F000019FF99 /* GRMustache.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5778A54D1C253F000019FF99 /* GRMustache.framework.dSYM */; };
+		5778A5501C2540310019FF99 /* GRMustache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5778A54F1C2540310019FF99 /* GRMustache.framework */; };
+		5778A5511C2540420019FF99 /* GRMustache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5778A54F1C2540310019FF99 /* GRMustache.framework */; };
+		5778A5521C2540420019FF99 /* GRMustache.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5778A54F1C2540310019FF99 /* GRMustache.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5794F3881C1D75A100C7AC4C /* Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5794F3871C1D75A100C7AC4C /* Twitter.swift */; };
 		5794F38A1C1D761D00C7AC4C /* TwitterAccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5794F3891C1D761D00C7AC4C /* TwitterAccountStore.swift */; };
 		5794F38C1C1D905600C7AC4C /* TwitterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5794F38B1C1D905600C7AC4C /* TwitterRequest.swift */; };
@@ -46,6 +50,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				57AF6EB31C19D32B00406A25 /* Himotoki.framework in Embed Frameworks */,
+				5778A5521C2540420019FF99 /* GRMustache.framework in Embed Frameworks */,
 				57AF6EB11C19D32B00406A25 /* APIKit.framework in Embed Frameworks */,
 				57AF6EB51C19D32B00406A25 /* OAuthSwift.framework in Embed Frameworks */,
 				57AF6EB71C19D32B00406A25 /* Result.framework in Embed Frameworks */,
@@ -60,6 +65,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				5778A54E1C253F000019FF99 /* GRMustache.framework.dSYM in CopyFiles */,
 				57C0FA151C251C7500D8D522 /* KeychainAccess.framework.dSYM in CopyFiles */,
 				57AF6EBF1C19D3AA00406A25 /* APIKit.framework.dSYM in CopyFiles */,
 				57AF6EC01C19D3AA00406A25 /* Himotoki.framework.dSYM in CopyFiles */,
@@ -71,6 +77,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5778A54D1C253F000019FF99 /* GRMustache.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = GRMustache.framework.dSYM; path = ../Carthage/Build/Mac/GRMustache.framework.dSYM; sourceTree = "<group>"; };
+		5778A54F1C2540310019FF99 /* GRMustache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GRMustache.framework; path = ../Carthage/Build/Mac/GRMustache.framework; sourceTree = "<group>"; };
 		5794F3871C1D75A100C7AC4C /* Twitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Twitter.swift; sourceTree = "<group>"; };
 		5794F3891C1D761D00C7AC4C /* TwitterAccountStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAccountStore.swift; sourceTree = "<group>"; };
 		5794F38B1C1D905600C7AC4C /* TwitterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterRequest.swift; sourceTree = "<group>"; };
@@ -103,8 +111,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5778A5501C2540310019FF99 /* GRMustache.framework in Frameworks */,
 				57C0FA101C251C2800D8D522 /* KeychainAccess.framework in Frameworks */,
 				57AF6EB21C19D32B00406A25 /* Himotoki.framework in Frameworks */,
+				5778A5511C2540420019FF99 /* GRMustache.framework in Frameworks */,
 				57C0FA111C251C3D00D8D522 /* KeychainAccess.framework in Frameworks */,
 				57AF6EB01C19D32B00406A25 /* APIKit.framework in Frameworks */,
 				57AF6EB41C19D32B00406A25 /* OAuthSwift.framework in Frameworks */,
@@ -172,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				57AF6EC31C19D3B700406A25 /* dSYM */,
+				5778A54F1C2540310019FF99 /* GRMustache.framework */,
 				57C0FA0F1C251C2800D8D522 /* KeychainAccess.framework */,
 				57AF6EAC1C19D32B00406A25 /* APIKit.framework */,
 				57AF6EAD1C19D32B00406A25 /* Himotoki.framework */,
@@ -184,6 +195,7 @@
 		57AF6EC31C19D3B700406A25 /* dSYM */ = {
 			isa = PBXGroup;
 			children = (
+				5778A54D1C253F000019FF99 /* GRMustache.framework.dSYM */,
 				57AF6EBB1C19D3AA00406A25 /* APIKit.framework.dSYM */,
 				57AF6EBC1C19D3AA00406A25 /* Himotoki.framework.dSYM */,
 				57AF6EBD1C19D3AA00406A25 /* OAuthSwift.framework.dSYM */,
