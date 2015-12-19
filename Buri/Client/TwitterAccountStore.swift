@@ -1,24 +1,33 @@
 import Foundation
-import Accounts
+import KeychainAccess
 import Result
 
 class TwitterAccountStore {
-    let accountStore = ACAccountStore()
-    let accountType: ACAccountType
+    static let sharedStore = TwitterAccountStore()
+    private static let keyChainServiceName = [NSBundle.mainBundle().bundleIdentifier!, "twitter-account"].joinWithSeparator(".")
 
-    init() {
-        accountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
+    let keychain = Keychain(service: keyChainServiceName)
+
+    func loadAcccounts() -> [TwitterAccount] {
+        var accounts: [TwitterAccount] = []
+        for key in keychain.allKeys() {
+            guard let data = try? self.keychain.getData(key) else {
+                continue
+            }
+            guard let account = NSKeyedUnarchiver.unarchiveObjectWithData(data!) as? TwitterAccount else {
+                continue
+            }
+            accounts.append(account)
+        }
+        return accounts
     }
 
-    func loadAcccounts(handler: (Result<[ACAccount], NSError>) -> Void) {
-        accountStore.requestAccessToAccountsWithType(accountType, options: nil, completion: { granted, error in
-            guard granted else {
-                handler(.Failure(error))
-                return
-            }
+    func addAccount(account: TwitterAccount) {
+        let appName = NSBundle.mainBundle().infoDictionary!["CFBundleDisplayName"]!
+        let label = "\(appName) TwitterAccount (\(account.screenName))"
 
-            let accounts = self.accountStore.accountsWithAccountType(self.accountType) as! [ACAccount]
-            handler(.Success(accounts))
-        })
+        try! keychain
+            .label(label)
+            .set(NSKeyedArchiver.archivedDataWithRootObject(account), key: account.userID)
     }
 }

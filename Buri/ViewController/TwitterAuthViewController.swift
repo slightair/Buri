@@ -5,6 +5,8 @@ import Result
 class TwitterAuthViewController: NSViewController, OAuthSwiftURLHandlerType {
     @IBOutlet weak var webView: WebView!
 
+    static let errorDomain = [NSBundle.mainBundle().bundleIdentifier!, "TwitterAuthViewControllerError"].joinWithSeparator(".")
+
     static func defaultViewController() -> TwitterAuthViewController {
         return NSStoryboard(name: "Main", bundle: nil).instantiateControllerWithIdentifier("TwitterAuth") as! TwitterAuthViewController
     }
@@ -26,7 +28,7 @@ class TwitterAuthViewController: NSViewController, OAuthSwiftURLHandlerType {
         }
     }
 
-    func authenticate(handler: (Result<(OAuthSwiftCredential, [String: String]), NSError>) -> Void) {
+    func authenticate(handler: (Result<TwitterAccount, NSError>) -> Void) {
         let oauthswift = OAuth1Swift(
             consumerKey: TwitterTokens.ConsumerKey,
             consumerSecret: TwitterTokens.ConsumerSecret,
@@ -38,9 +40,19 @@ class TwitterAuthViewController: NSViewController, OAuthSwiftURLHandlerType {
         oauthswift.authorizeWithCallbackURL( NSURL(string: "buri://oauth-callback/twitter")!,
             success: { credential, response, parameters in
                 self.parentViewController?.dismissViewController(self)
-                handler(.Success((credential, parameters)))
+
+                guard let userID = parameters["user_id"], screenName = parameters["screen_name"] else {
+                    let error = NSError(domain: TwitterAuthViewController.errorDomain, code: 0, userInfo: [NSLocalizedDescriptionKey: "invalid response"])
+                    handler(.Failure(error))
+                    return
+                }
+
+                let newAccount = TwitterAccount(userID: userID, screenName: screenName, credential: credential)
+                handler(.Success(newAccount))
             },
             failure: { error in
+                self.parentViewController?.dismissViewController(self)
+
                 handler(.Failure(error))
             }
         )

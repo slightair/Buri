@@ -1,4 +1,5 @@
-github "ikesyo/Himotoki" "1.3.1"
-github "OAuthSwift/OAuthSwift" "355b7fb32c3281fa6ee9e3a242d8e3ad3a02124c"
+github "ikesyo/Himotoki" "1.3.2"
+github "kishikawakatsumi/KeychainAccess" "v2.3.3"
+github "OAuthSwift/OAuthSwift" "539068c970a2c6cdc0382966df47e805b90d92be"
 github "antitypical/Result" "1.0.1"
-github "ishkawa/APIKit" "1.0.0"
+github "ishkawa/APIKit" "1.1.2"

@@ -28,8 +28,12 @@
 		57AF6EC01C19D3AA00406A25 /* Himotoki.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 57AF6EBC1C19D3AA00406A25 /* Himotoki.framework.dSYM */; };
 		57AF6EC11C19D3AA00406A25 /* OAuthSwift.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 57AF6EBD1C19D3AA00406A25 /* OAuthSwift.framework.dSYM */; };
 		57AF6EC21C19D3AA00406A25 /* Result.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 57AF6EBE1C19D3AA00406A25 /* Result.framework.dSYM */; };
+		57C0FA0E1C251AAD00D8D522 /* TwitterAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C0FA0D1C251AAD00D8D522 /* TwitterAccount.swift */; };
+		57C0FA101C251C2800D8D522 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C0FA0F1C251C2800D8D522 /* KeychainAccess.framework */; };
+		57C0FA111C251C3D00D8D522 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C0FA0F1C251C2800D8D522 /* KeychainAccess.framework */; };
+		57C0FA121C251C3D00D8D522 /* KeychainAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 57C0FA0F1C251C2800D8D522 /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57C0FA151C251C7500D8D522 /* KeychainAccess.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 57C0FA141C251C7500D8D522 /* KeychainAccess.framework.dSYM */; };
 		57C58F051C1F06B400840B56 /* GetUserTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C58F041C1F06B400840B56 /* GetUserTimeline.swift */; };
-		57DDDDCD1C1D49D40095F7D2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DDDDCC1C1D49D40095F7D2 /* Social.framework */; };
 		7FEB68A21C210F02005DF5F2 /* TwitterAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEB68A11C210F02005DF5F2 /* TwitterAuthViewController.swift */; };
 		7FEB68A41C211035005DF5F2 /* TwitterTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEB68A31C211035005DF5F2 /* TwitterTokens.swift */; };
 /* End PBXBuildFile section */
@@ -45,6 +49,7 @@
 				57AF6EB11C19D32B00406A25 /* APIKit.framework in Embed Frameworks */,
 				57AF6EB51C19D32B00406A25 /* OAuthSwift.framework in Embed Frameworks */,
 				57AF6EB71C19D32B00406A25 /* Result.framework in Embed Frameworks */,
+				57C0FA121C251C3D00D8D522 /* KeychainAccess.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,6 +60,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				57C0FA151C251C7500D8D522 /* KeychainAccess.framework.dSYM in CopyFiles */,
 				57AF6EBF1C19D3AA00406A25 /* APIKit.framework.dSYM in CopyFiles */,
 				57AF6EC01C19D3AA00406A25 /* Himotoki.framework.dSYM in CopyFiles */,
 				57AF6EC11C19D3AA00406A25 /* OAuthSwift.framework.dSYM in CopyFiles */,
@@ -84,8 +90,10 @@
 		57AF6EBC1C19D3AA00406A25 /* Himotoki.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Himotoki.framework.dSYM; path = ../Carthage/Build/Mac/Himotoki.framework.dSYM; sourceTree = "<group>"; };
 		57AF6EBD1C19D3AA00406A25 /* OAuthSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = OAuthSwift.framework.dSYM; path = ../Carthage/Build/Mac/OAuthSwift.framework.dSYM; sourceTree = "<group>"; };
 		57AF6EBE1C19D3AA00406A25 /* Result.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Result.framework.dSYM; path = ../Carthage/Build/Mac/Result.framework.dSYM; sourceTree = "<group>"; };
+		57C0FA0D1C251AAD00D8D522 /* TwitterAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAccount.swift; sourceTree = "<group>"; };
+		57C0FA0F1C251C2800D8D522 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = ../Carthage/Build/Mac/KeychainAccess.framework; sourceTree = "<group>"; };
+		57C0FA141C251C7500D8D522 /* KeychainAccess.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = KeychainAccess.framework.dSYM; path = ../Carthage/Build/Mac/KeychainAccess.framework.dSYM; sourceTree = "<group>"; };
 		57C58F041C1F06B400840B56 /* GetUserTimeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetUserTimeline.swift; path = API/GetUserTimeline.swift; sourceTree = "<group>"; };
-		57DDDDCC1C1D49D40095F7D2 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		7FEB68A11C210F02005DF5F2 /* TwitterAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAuthViewController.swift; sourceTree = "<group>"; };
 		7FEB68A31C211035005DF5F2 /* TwitterTokens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterTokens.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,8 +103,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57DDDDCD1C1D49D40095F7D2 /* Social.framework in Frameworks */,
+				57C0FA101C251C2800D8D522 /* KeychainAccess.framework in Frameworks */,
 				57AF6EB21C19D32B00406A25 /* Himotoki.framework in Frameworks */,
+				57C0FA111C251C3D00D8D522 /* KeychainAccess.framework in Frameworks */,
 				57AF6EB01C19D32B00406A25 /* APIKit.framework in Frameworks */,
 				57AF6EB41C19D32B00406A25 /* OAuthSwift.framework in Frameworks */,
 				57AF6EB61C19D32B00406A25 /* Result.framework in Frameworks */,
@@ -119,6 +128,7 @@
 			children = (
 				57C58F031C1F068D00840B56 /* API */,
 				5794F3891C1D761D00C7AC4C /* TwitterAccountStore.swift */,
+				57C0FA0D1C251AAD00D8D522 /* TwitterAccount.swift */,
 				5794F3871C1D75A100C7AC4C /* Twitter.swift */,
 				5794F38B1C1D905600C7AC4C /* TwitterRequest.swift */,
 				7FEB68A31C211035005DF5F2 /* TwitterTokens.swift */,
@@ -162,7 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				57AF6EC31C19D3B700406A25 /* dSYM */,
-				57DDDDCC1C1D49D40095F7D2 /* Social.framework */,
+				57C0FA0F1C251C2800D8D522 /* KeychainAccess.framework */,
 				57AF6EAC1C19D32B00406A25 /* APIKit.framework */,
 				57AF6EAD1C19D32B00406A25 /* Himotoki.framework */,
 				57AF6EAE1C19D32B00406A25 /* OAuthSwift.framework */,
@@ -178,6 +188,7 @@
 				57AF6EBC1C19D3AA00406A25 /* Himotoki.framework.dSYM */,
 				57AF6EBD1C19D3AA00406A25 /* OAuthSwift.framework.dSYM */,
 				57AF6EBE1C19D3AA00406A25 /* Result.framework.dSYM */,
+				57C0FA141C251C7500D8D522 /* KeychainAccess.framework.dSYM */,
 			);
 			name = dSYM;
 			sourceTree = "<group>";
@@ -277,6 +288,7 @@
 				5794F38C1C1D905600C7AC4C /* TwitterRequest.swift in Sources */,
 				5794F3941C1DB97100C7AC4C /* Tweet.swift in Sources */,
 				5794F3881C1D75A100C7AC4C /* Twitter.swift in Sources */,
+				57C0FA0E1C251AAD00D8D522 /* TwitterAccount.swift in Sources */,
 				5794F38E1C1D908A00C7AC4C /* GetHomeTimeline.swift in Sources */,
 				57AF6E9E1C19C12100406A25 /* AppDelegate.swift in Sources */,
 				57C58F051C1F06B400840B56 /* GetUserTimeline.swift in Sources */,
