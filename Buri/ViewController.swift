@@ -1,5 +1,6 @@
 import Cocoa
 import Result
+import Mustache
 
 class ViewController: NSViewController {
     var twitterAuthViewController = TwitterAuthViewController.defaultViewController()
@@ -50,7 +51,13 @@ class ViewController: NSViewController {
         Twitter.sendRequest(request) { result in
             switch result {
             case .Success(let result):
-                print(result)
+                let template = try! Template(string: "{{screen_name}}: {{text}}")
+
+                for tweet in result {
+                    if let text = try? template.render(Box(tweet)) {
+                        print(text)
+                    }
+                }
             case .Failure(let error):
                 print(error)
             }
