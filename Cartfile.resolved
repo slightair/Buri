@@ -1,4 +1,4 @@
-github "groue/GRMustache" "cdc2ef8d057785c2d24e2292b19a1d5391807eb9"
+github "groue/GRMustache.swift" "v0.11.0"
 github "ikesyo/Himotoki" "1.3.2"
 github "kishikawakatsumi/KeychainAccess" "v2.3.3"
 github "OAuthSwift/OAuthSwift" "539068c970a2c6cdc0382966df47e805b90d92be"
