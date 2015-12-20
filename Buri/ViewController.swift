@@ -1,8 +1,11 @@
 import Cocoa
+import WebKit
 import Result
 import Mustache
 
 class ViewController: NSViewController {
+    @IBOutlet weak var webView: WebView!
+
     var twitterAuthViewController = TwitterAuthViewController.defaultViewController()
 
     override func viewDidLoad() {
@@ -51,22 +54,17 @@ class ViewController: NSViewController {
         Twitter.sendRequest(request) { result in
             switch result {
             case .Success(let result):
-                let template = try! Template(string: "{{screen_name}}: {{text}}")
-
-                for tweet in result {
-                    if let text = try? template.render(Box(tweet)) {
-                        print(text)
-                    }
-                }
+                self.updateTimeline(result)
             case .Failure(let error):
                 print(error)
             }
         }
     }
 
-    override var representedObject: AnyObject? {
-        didSet {
-            // Update the view, if already loaded.
+    func updateTimeline(tweets: [Tweet]) {
+        let template = try? Template(named: "layout")
+        if let renderedHTML = try? template?.render(Box(["tweets": Box(tweets)])) {
+            self.webView.mainFrame.loadHTMLString(renderedHTML, baseURL: NSBundle.mainBundle().resourceURL)
         }
     }
 }

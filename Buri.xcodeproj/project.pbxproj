@@ -11,6 +11,15 @@
 		5778A5551C2546C70019FF99 /* Mustache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5778A5531C2546A40019FF99 /* Mustache.framework */; };
 		5778A5561C2546C70019FF99 /* Mustache.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5778A5531C2546A40019FF99 /* Mustache.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5778A5581C2546E70019FF99 /* Mustache.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5778A5571C2546E70019FF99 /* Mustache.framework.dSYM */; };
+		5778A55B1C259D960019FF99 /* layout.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 5778A55A1C259D960019FF99 /* layout.mustache */; };
+		5778A55D1C259DA20019FF99 /* tweet.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 5778A55C1C259DA20019FF99 /* tweet.mustache */; };
+		5778A56C1C2664E10019FF99 /* bootstrap.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 5778A5631C2664E10019FF99 /* bootstrap.min.css */; };
+		5778A56D1C2664E10019FF99 /* glyphicons-halflings-regular.eot in Resources */ = {isa = PBXBuildFile; fileRef = 5778A5651C2664E10019FF99 /* glyphicons-halflings-regular.eot */; };
+		5778A56E1C2664E10019FF99 /* glyphicons-halflings-regular.svg in Resources */ = {isa = PBXBuildFile; fileRef = 5778A5661C2664E10019FF99 /* glyphicons-halflings-regular.svg */; };
+		5778A56F1C2664E10019FF99 /* glyphicons-halflings-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5778A5671C2664E10019FF99 /* glyphicons-halflings-regular.ttf */; };
+		5778A5701C2664E10019FF99 /* glyphicons-halflings-regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 5778A5681C2664E10019FF99 /* glyphicons-halflings-regular.woff */; };
+		5778A5711C2664E10019FF99 /* glyphicons-halflings-regular.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 5778A5691C2664E10019FF99 /* glyphicons-halflings-regular.woff2 */; };
+		5778A5721C2664E10019FF99 /* bootstrap.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 5778A56B1C2664E10019FF99 /* bootstrap.min.js */; };
 		5794F3881C1D75A100C7AC4C /* Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5794F3871C1D75A100C7AC4C /* Twitter.swift */; };
 		5794F38A1C1D761D00C7AC4C /* TwitterAccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5794F3891C1D761D00C7AC4C /* TwitterAccountStore.swift */; };
 		5794F38C1C1D905600C7AC4C /* TwitterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5794F38B1C1D905600C7AC4C /* TwitterRequest.swift */; };
@@ -78,6 +87,15 @@
 /* Begin PBXFileReference section */
 		5778A5531C2546A40019FF99 /* Mustache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mustache.framework; path = ../Carthage/Build/Mac/Mustache.framework; sourceTree = "<group>"; };
 		5778A5571C2546E70019FF99 /* Mustache.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Mustache.framework.dSYM; path = ../Carthage/Build/Mac/Mustache.framework.dSYM; sourceTree = "<group>"; };
+		5778A55A1C259D960019FF99 /* layout.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = layout.mustache; sourceTree = "<group>"; };
+		5778A55C1C259DA20019FF99 /* tweet.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tweet.mustache; sourceTree = "<group>"; };
+		5778A5631C2664E10019FF99 /* bootstrap.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = bootstrap.min.css; sourceTree = "<group>"; };
+		5778A5651C2664E10019FF99 /* glyphicons-halflings-regular.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "glyphicons-halflings-regular.eot"; sourceTree = "<group>"; };
+		5778A5661C2664E10019FF99 /* glyphicons-halflings-regular.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "glyphicons-halflings-regular.svg"; sourceTree = "<group>"; };
+		5778A5671C2664E10019FF99 /* glyphicons-halflings-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "glyphicons-halflings-regular.ttf"; sourceTree = "<group>"; };
+		5778A5681C2664E10019FF99 /* glyphicons-halflings-regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "glyphicons-halflings-regular.woff"; sourceTree = "<group>"; };
+		5778A5691C2664E10019FF99 /* glyphicons-halflings-regular.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "glyphicons-halflings-regular.woff2"; sourceTree = "<group>"; };
+		5778A56B1C2664E10019FF99 /* bootstrap.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bootstrap.min.js; sourceTree = "<group>"; };
 		5794F3871C1D75A100C7AC4C /* Twitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Twitter.swift; sourceTree = "<group>"; };
 		5794F3891C1D761D00C7AC4C /* TwitterAccountStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAccountStore.swift; sourceTree = "<group>"; };
 		5794F38B1C1D905600C7AC4C /* TwitterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterRequest.swift; sourceTree = "<group>"; };
@@ -123,6 +141,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5778A5591C259C9B0019FF99 /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				5778A55A1C259D960019FF99 /* layout.mustache */,
+				5778A55C1C259DA20019FF99 /* tweet.mustache */,
+			);
+			path = Template;
+			sourceTree = "<group>";
+		};
+		5778A55E1C2662BE0019FF99 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5778A5601C26634B0019FF99 /* Resource */,
+				5778A5591C259C9B0019FF99 /* Template */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5778A5601C26634B0019FF99 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				5778A5611C2664E10019FF99 /* bootstrap-3.3.6-dist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		5778A5611C2664E10019FF99 /* bootstrap-3.3.6-dist */ = {
+			isa = PBXGroup;
+			children = (
+				5778A5621C2664E10019FF99 /* css */,
+				5778A5641C2664E10019FF99 /* fonts */,
+				5778A56A1C2664E10019FF99 /* js */,
+			);
+			path = "bootstrap-3.3.6-dist";
+			sourceTree = "<group>";
+		};
+		5778A5621C2664E10019FF99 /* css */ = {
+			isa = PBXGroup;
+			children = (
+				5778A5631C2664E10019FF99 /* bootstrap.min.css */,
+			);
+			path = css;
+			sourceTree = "<group>";
+		};
+		5778A5641C2664E10019FF99 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5778A5651C2664E10019FF99 /* glyphicons-halflings-regular.eot */,
+				5778A5661C2664E10019FF99 /* glyphicons-halflings-regular.svg */,
+				5778A5671C2664E10019FF99 /* glyphicons-halflings-regular.ttf */,
+				5778A5681C2664E10019FF99 /* glyphicons-halflings-regular.woff */,
+				5778A5691C2664E10019FF99 /* glyphicons-halflings-regular.woff2 */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		5778A56A1C2664E10019FF99 /* js */ = {
+			isa = PBXGroup;
+			children = (
+				5778A56B1C2664E10019FF99 /* bootstrap.min.js */,
+			);
+			path = js;
+			sourceTree = "<group>";
+		};
 		5794F3911C1DB8C800C7AC4C /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +245,7 @@
 		57AF6E9C1C19C12100406A25 /* Buri */ = {
 			isa = PBXGroup;
 			children = (
+				5778A55E1C2662BE0019FF99 /* View */,
 				7FEB68A01C210ED3005DF5F2 /* ViewController */,
 				5794F3921C1DB8EE00C7AC4C /* Client */,
 				5794F3911C1DB8C800C7AC4C /* Entity */,
@@ -280,8 +363,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5778A5711C2664E10019FF99 /* glyphicons-halflings-regular.woff2 in Resources */,
+				5778A5721C2664E10019FF99 /* bootstrap.min.js in Resources */,
+				5778A56F1C2664E10019FF99 /* glyphicons-halflings-regular.ttf in Resources */,
+				5778A56C1C2664E10019FF99 /* bootstrap.min.css in Resources */,
 				57AF6EA21C19C12100406A25 /* Assets.xcassets in Resources */,
+				5778A5701C2664E10019FF99 /* glyphicons-halflings-regular.woff in Resources */,
+				5778A56E1C2664E10019FF99 /* glyphicons-halflings-regular.svg in Resources */,
+				5778A55B1C259D960019FF99 /* layout.mustache in Resources */,
 				57AF6EA51C19C12100406A25 /* Main.storyboard in Resources */,
+				5778A56D1C2664E10019FF99 /* glyphicons-halflings-regular.eot in Resources */,
+				5778A55D1C259DA20019FF99 /* tweet.mustache in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

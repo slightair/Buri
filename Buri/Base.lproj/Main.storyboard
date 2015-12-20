@@ -672,7 +672,24 @@
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <webView translatesAutoresizingMaskIntoConstraints="NO" id="tTg-Ue-Gtd">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <webPreferences key="preferences" defaultFontSize="14" defaultFixedFontSize="14" minimumFontSize="0">
+                                    <nil key="identifier"/>
+                                </webPreferences>
+                            </webView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="tTg-Ue-Gtd" secondAttribute="bottom" id="Eiw-CU-29i"/>
+                            <constraint firstItem="tTg-Ue-Gtd" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="ZBF-cf-Sdr"/>
+                            <constraint firstAttribute="trailing" secondItem="tTg-Ue-Gtd" secondAttribute="trailing" id="m3F-8W-EOw"/>
+                            <constraint firstItem="tTg-Ue-Gtd" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="uP2-un-sRg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="tTg-Ue-Gtd" id="9sS-kz-JLW"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
